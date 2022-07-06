@@ -1,0 +1,32 @@
+@import '../../app/scss/variables.scss';
+
+.top-card {
+    // dimensions
+    width: 540px;
+    min-height: 123px;
+    padding: 0 39px 0 35px;
+    border-radius: 20px;
+
+    background-color: $accent-red-color;
+
+    // flex
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .top-card__balance {
+        color: $top-card-text-color;
+
+        .top-card__balance__title {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .top-card__balance__value {
+            font-size: 32px;
+            font-weight: $fw-bold;
+        }
+    }
+
+    .top-card__logo-container {}
+}
