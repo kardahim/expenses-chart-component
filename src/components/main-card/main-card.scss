@@ -14,19 +14,45 @@
         margin-left: 20px;
     }
 
-    .main-card__divider {}
+    .main-card__divider {
+        height: 2px;
+        background-color: $background-color;
+        margin: 15px 20px 35px;
+    }
 
     .main-card__summary {
-        .main-card__summary__total {
-            .main-card__summary__total__text {}
+        margin: 0 20px;
 
-            .main-card__summary__total__value {}
+        // flex
+        display: flex;
+        justify-content: space-between;
+
+        .main-card__summary__total {
+            .main-card__summary__total__text {
+                color: $subtext-color;
+                font-size: $fs;
+            }
+
+            .main-card__summary__total__value {
+                font-weight: $fw-bold;
+                font-size: 50px;
+                color: $text-color;
+            }
         }
 
         .main-card__summary__last-month {
-            .main-card__summary__last-month__percent {}
+            text-align: right;
+            margin-top: 28px;
+            font-size: $fs;
 
-            .main-card__summary__last-month__text {}
+            .main-card__summary__last-month__percent {
+                font-weight: $fw-bold;
+                color: $text-color;
+            }
+
+            .main-card__summary__last-month__text {
+                color: $subtext-color;
+            }
         }
     }
 }

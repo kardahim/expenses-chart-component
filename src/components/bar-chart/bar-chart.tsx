@@ -12,6 +12,7 @@ import {
     Tooltip,
 } from 'chart.js';
 
+
 function BarChart() {
     const [labels, setLabels] = useState<string[]>([])
     const [amount, setAmounts] = useState<number[]>([])
