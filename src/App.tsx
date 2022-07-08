@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <TopCard />
       <MainCard />
-      {/* <Attribution /> */}
+      <Attribution />
     </div>
   );
 }
