@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.main-card {
+    // dimensions
+    width: 540px;
+    min-height: 510px;
+    margin-top: 24px;
+    border-radius: 20px;
+    padding: 35px 20px;
+
+    background-color: $top-card-text-color;
+
+    .main-card__header {
+        margin-left: 20px;
+    }
+
+    .main-card__divider {}
+
+    .main-card__summary {
+        .main-card__summary__total {
+            .main-card__summary__total__text {}
+
+            .main-card__summary__total__value {}
+        }
+
+        .main-card__summary__last-month {
+            .main-card__summary__last-month__percent {}
+
+            .main-card__summary__last-month__text {}
+        }
+    }
+}
