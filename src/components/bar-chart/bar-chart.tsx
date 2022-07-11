@@ -17,6 +17,27 @@ function BarChart() {
     const [labels, setLabels] = useState<string[]>([])
     const [amount, setAmounts] = useState<number[]>([])
 
+    // set mobile aspect ratio
+    const [isMobile, setIsMobile] = useState(2)
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            if (document.body.clientWidth > 700) {
+                setIsMobile(2)
+            }
+            else {
+                setIsMobile(1.5)
+            }
+        })
+        return () => window.removeEventListener("resize", () => {
+            if (document.body.clientWidth > 700) {
+                setIsMobile(2)
+            }
+            else {
+                setIsMobile(1.5)
+            }
+        })
+    })
+
     useEffect(() => {
         // prevents for second render
         setLabels([])
@@ -40,6 +61,7 @@ function BarChart() {
 
     const options = {
         responsive: true,
+        aspectRatio: isMobile,
         plugins: {
             tooltip: {
                 xAlign: 'center' as 'center',

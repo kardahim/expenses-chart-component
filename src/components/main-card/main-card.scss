@@ -10,23 +10,40 @@
     padding: 35px 20px;
 
     @include mobile {
-        width: 345px;
+        width: 343px;
+        min-height: 422px;
+        margin-top: 15px;
+        border-radius: 10px;
+        padding: 22px 20px;
     }
 
     background-color: $top-card-text-color;
 
     .main-card__header {
         margin-left: 20px;
+
+        @include mobile {
+            margin-left: 0;
+            font-size: 24px;
+        }
     }
 
     .main-card__divider {
         height: 2px;
         background-color: $background-color;
         margin: 15px 20px 35px;
+
+        @include mobile {
+            margin: 15px 0px 27px;
+        }
     }
 
     .main-card__summary {
         margin: 0 20px;
+
+        @include mobile {
+            margin: 0;
+        }
 
         // flex
         display: flex;
@@ -36,12 +53,21 @@
             .main-card__summary__total__text {
                 color: $subtext-color;
                 font-size: $fs;
+
+                @include mobile {
+                    font-size: 15px;
+                    margin-top: 3px;
+                }
             }
 
             .main-card__summary__total__value {
                 font-weight: $fw-bold;
                 font-size: 50px;
                 color: $text-color;
+
+                @include mobile {
+                    font-size: 30px;
+                }
             }
         }
 
@@ -49,6 +75,11 @@
             text-align: right;
             margin-top: 28px;
             font-size: $fs;
+
+            @include mobile {
+                font-size: 15px;
+                margin-top: 24px;
+            }
 
             .main-card__summary__last-month__percent {
                 font-weight: $fw-bold;
