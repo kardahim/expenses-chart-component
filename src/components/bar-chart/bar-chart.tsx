@@ -99,6 +99,9 @@ function BarChart() {
                     display: false
                 }
             }
+        },
+        onHover: (event: any, chartElement: any) => {
+            event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
         }
     }
 
