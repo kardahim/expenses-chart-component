@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
 
 .top-card {
     // dimensions
@@ -6,6 +7,13 @@
     min-height: 123px;
     padding: 0 39px 0 35px;
     border-radius: 20px;
+
+    @include mobile {
+        width: 343px;
+        min-height: 97px;
+        padding: 15px 22px 10px 19px;
+        border-radius: 10px;
+    }
 
     background-color: $accent-red-color;
 
@@ -20,13 +28,29 @@
         .top-card__balance__title {
             font-size: 17px;
             margin-bottom: 8px;
+
+            @include mobile {
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
         }
 
         .top-card__balance__value {
             font-size: 32px;
             font-weight: $fw-bold;
+
+            @include mobile {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
         }
     }
 
-    .top-card__logo-container {}
+    .top-card__logo-container {
+        img {
+            @include mobile {
+                height: 40px;
+            }
+        }
+    }
 }
